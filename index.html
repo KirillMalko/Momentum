@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://icono-49d6.kxcdn.com/icono.min.css">
+  <title>Momentum</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="player">
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+
+        <button class="play-next player-icon"></button>
+      </div>
+      
+      <ul class="play-list">
+
+            
+      </ul>
+    </div>
+    <div id="cat" class="weather">
+
+      <input placeholder="Enter the city" type="text" class="city" />
+
+
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+        <span class="humidity"></span>
+        <span class="wind"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+    <button class="sett-btn"> <img src="assets/svg/setting.svg"></button>
+    <button class="todo-btn"> <img src="assets/svg/menu.svg" alt=""></button>
+
+    <div class="todolist off">
+      <button class="closetodo">X</button>
+      <h2>to do list</h2>
+      <ul class="dolist">
+        <li class="doitem"><button class="dodutton">DO</button><input id="txtdo" class="dotext" type="text"><button
+            class="dodel">X</button></li>
+        <li class="doitem"><button class="dodutton2">DO</button><input id="txtdo" class="dotext2" type="text"><button
+            class="dodel2">X </button></li>
+        <li class="doitem"><button class="dodutton3">DO</button><input id="txtdo" class="dotext3" type="text"><button
+            class="dodel3">X</button></li>
+        <li class="doitem"><button class="dodutton4">DO</button><input id="txtdo" class="dotext4" type="text"><button
+            class="dodel4">X</button></li>
+        <li class="doitem"><button class="dodutton5">DO</button><input id="txtdo" class="dotext5" type="text"><button
+            class="dodel5">X</button></li>
+        <li class="doitem"><button class="dodutton6">DO</button><input id="txtdo" class="dotext6" type="text"><button
+            class="dodel6">X</button></li>
+        <li class="doitem"><button class="dodutton7">DO</button><input id="txtdo" class="dotext7" type="text"><button
+            class="dodel7">X</button></li>
+        <li class="doitem"><button class="dodutton8">DO</button><input id="txtdo" class="dotext8" type="text"><button
+            class="dodel8">X</button></li>
+
+      </ul>
+
+
+
+      </ul>
+    </div>
+    <div class="main-settings off ">
+      <button class="closesett">X</button>
+      <div class="lang">
+        <span>
+          Сhange language.
+        </span>
+        <select>
+          <option value="Русский">Русский</option>
+          <option value="English">English</option>
+        </select>
+
+      </div>
+      <div class="img-source"></div>
+      <div class="blocks">
+        <div class="greeting-set">
+          <span>Greeting</span>
+          <button id="greeting" class="greeting-btn">Hide</button>
+        </div>
+        <div class="weather-set">
+          <span>Weather</span>
+          <button id="weather" class="weather-btn">Hide</button>
+        </div>
+
+
+        <div class="player-set">
+          <span>Player</span>
+          <button class="player-btn">Hide</button>
+        </div>
+        <div class="quote-set">
+          <span>Quote</span>
+          <button class="quote-btn">Hide</button>
+        </div>
+        <div class="time-set">
+          <span>Time</span>
+          <button class="timebtn">Hide</button>
+        </div>
+        <div class="date-set">
+          <span>Date</span>
+          <button class="date-btn">Hide</button>
+        </div>
+
+
+      </div>
+
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time timew"></time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input placeholder="[Enter name]" type="text" class="name" />
+    </div>
+  </main>
+  <footer class="footer">
+    <button class="change-quote"></button>
+
+    <div>
+      <div class="quote"></div>
+      <div class="author"></div>
+ </div>
+
+  </footer>
+ <div class="footer-link">
+  <div><a href="https://github.com/KirillMalko" target="_blank"><img src="assets/svg/gh.png" alt="logo-gh"></a>
+  </div>
+  <div class="year">2021</div>
+  <div><a href="https://rs.school/js/" target="_blank"><img src="assets/svg/rs_school_js.svg" alt="logo-rss"></a></div>
+ </div>
+  <script src="script/time.js"></script>
+  <script src="script/weather.js"></script>
+  <script src="script/greeting.js"></script>
+  <script src="script/quote.js"></script>
+  <script src="script/player.js"></script>
+  <script src="script/setting.js"></script>
+  <script src="script/todo.js"></script>
+
+
+</body>
+
+</html>
