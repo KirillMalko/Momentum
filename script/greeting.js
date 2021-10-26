@@ -40,8 +40,8 @@ if (hours > 5 && hours < 12) {
     body.style.backgroundImage = `url('https://raw.githubusercontent.com/KirillMalko/stage1-tasks/assets/images/morning/${randomMainBg.toString().padStart(2, '0')}.jpg')`
 } else if (hours >= 12 && hours < 19) {
     greeting.innerHTML = 'Good afternoon,';
-    timeOfDay = 'afternoon';
-    body.style.backgroundImage = `url('https://raw.githubusercontent.com/KirillMalko/stage1-tasks/assets/images/afternoon/${randomMainBg.toString().padStart(2, '0')}.jpg')`
+    timeOfDay = 'day';
+    body.style.backgroundImage = `url('https://raw.githubusercontent.com/KirillMalko/stage1-tasks/assets/images/day/${randomMainBg.toString().padStart(2, '0')}.jpg')`
 
 } else if (hours >= 18 && hours <= 23) {
     greeting.innerHTML = 'Good evening,';
@@ -70,7 +70,7 @@ const prevSlide = () => {
         body.style.backgroundImage = `url('https://raw.githubusercontent.com/KirillMalko/stage1-tasks/assets/images/${timeOfDay}/${randomMainBg--}.jpg')`
 
         body.style.backgroundImage = `url('https://raw.githubusercontent.com/KirillMalko/stage1-tasks/assets/images/${timeOfDay}/${randomMainBg.toString().padStart(2, '0')}.jpg')`
-    } else if (randomMainBg = 1) {
+    } else if (randomMainBg === 1) {
         randomMainBg = 20;
         body.style.backgroundImage = `url('https://raw.githubusercontent.com/KirillMalko/stage1-tasks/assets/images/${timeOfDay}/${randomMainBg--}.jpg')`
 
