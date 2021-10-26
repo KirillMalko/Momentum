@@ -1,9 +1,17 @@
 const  playBtn = document.querySelector('.play');
-
+const playPrev = document.querySelector('.play-prev');
+const playListContainer = document.querySelector('.play-list');
 const  playNext = document.querySelector('.play-next');
+playBtn.addEventListener('click', playAudio);
+playBtn.addEventListener('click', toggleBtn);
+playPrev.addEventListener('click', prevTreck);
+playNext.addEventListener('click', nextTreck);
+
+let playNum = 0;
 let isPlay = false;
 let audio = new Audio();
 let randomInt = randomInteger(1, 4)
+
 
 const playList = [
     {
@@ -28,7 +36,7 @@ const playList = [
     }
 
 ]
-console.log(playList[randomInt].src)
+
 
 function randomInteger(min, max) {
 
@@ -39,32 +47,53 @@ function randomInteger(min, max) {
 function playAudio() {
     if(!isPlay){
         isPlay = true;
-        audio.src = playList[randomInt].src;
-        playBtn.classList.add('pause')
-        playBtn.classList.remove('play')
+        audio.src = playList[playNum].src;
         audio.currentTime = 0;
         audio.play();
     }else if(isPlay){
         audio.pause();
         isPlay = false
-        playBtn.classList.remove('pause')
-        playBtn.classList.add('play')
+
     }
 
+}
+
+function toggleBtn() {
+    if(isPlay) {
+        playBtn.classList.add('pause');
+    } else {
+        playBtn.classList.remove('pause');
+    }
 }
 function nextTreck(){
-    if(randomInt < 4) {
-        let newNum = randomInt
-        newNum += 1;
-        audio.src = playList[newNum].src;
-        console.log(newNum)
-    }else if(randomInt === 4){
-        audio.src = playList[0].src;
+    if(playNum !== 3) {
+        playNum += 1;
+    } else {
+        playNum = 0;
     }
+    audio.src = playList[playNum].src;
+    audio.currentTime = 0;
+    audio.play();
 
 }
-// function pauseAudio() {
-//     audio.pause();
-// }
-playBtn.addEventListener('click', playAudio);
-playNext.addEventListener('click', nextTreck);
+
+function prevTreck() {
+    if(playNum === 0) {
+        playNum = 3;
+    } else {
+        playNum = playNum - 1;
+    }
+    audio.src = playList[playNum].src;
+    audio.currentTime = 0;
+    audio.play();
+
+}
+
+
+
+for(let i = 0; i < playList.length; i++) {
+    const li = document.createElement('li');
+    li.classList.add('play-item');
+    li.textContent = playList[i].title;
+    playListContainer.append(li);
+}
